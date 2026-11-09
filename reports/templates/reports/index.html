@@ -1,10 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'reports/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Header Section -->
+<header class="bg-dark py-5">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-center my-5">
+
+                    <h1 class="display-5 fw-bolder text-white mb-2">
+                        Welcome to CampusFix
+                    </h1>
+
+                    <p class="lead text-white-50 mb-4">
+                        Your campus, your voice, our responsibility.
+                        Report problems and help improve your campus environment.
+                    </p>
+
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+
+                        <a class="btn btn-primary btn-lg px-4"
+                           href="{% url 'report' %}">
+                            Report an Issue
+                        </a>
+
+                        <a class="btn btn-outline-light btn-lg px-4"
+                           href="{% url 'reports' %}">
+                            View Reports
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Features Section -->
+<section class="py-5 border-bottom">
+    <div class="container px-5 my-5">
+        <div class="row gx-5">
+
+            <div class="col-lg-4 mb-5">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+                    <i class="bi bi-exclamation-circle"></i>
+                </div>
+                <h2 class="h4 fw-bolder">Report Issues</h2>
+                <p>
+                    Students can easily report problems affecting
+                    their campus environment.
+                </p>
+                <a class="text-decoration-none" href="{% url 'report' %}">
+                    Report now
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="col-lg-4 mb-5">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+                    <i class="bi bi-clipboard-check"></i>
+                </div>
+                <h2 class="h4 fw-bolder">Track Progress</h2>
+                <p>
+                    Check the progress and status of submitted
+                    campus issues.
+                </p>
+                <a class="text-decoration-none" href="{% url 'reports' %}">
+                    View progress
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="col-lg-4 mb-5">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+                    <i class="bi bi-building"></i>
+                </div>
+                <h2 class="h4 fw-bolder">Improve Campus</h2>
+                <p>
+                    Work together to create a better and more
+                    comfortable learning environment.
+                </p>
+                <a class="text-decoration-none" href="{% url 'report' %}">
+                    Get involved
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}
