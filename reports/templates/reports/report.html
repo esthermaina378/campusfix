@@ -1,3 +1,4 @@
+```django
 {% extends 'reports/base.html' %}
 {% load static %}
 
@@ -11,32 +12,33 @@
         {% csrf_token %}
 
         <div class="mb-3">
-            <label>Issue Title</label>
-            <input type="text" name="title"
+            <label for="title">Issue Title</label>
+            <input type="text" id="title" name="title"
                    class="form-control" required>
         </div>
 
         <div class="mb-3">
-            <label>Category</label>
-            <select name="category" class="form-select" required>
+            <label for="category">Category</label>
+            <select id="category" name="category"
+                    class="form-select" required>
                 <option value="">Choose category</option>
-                <option>Electricity</option>
-                <option>Water</option>
-                <option>Internet</option>
-                <option>Cleaning</option>
-                <option>Other</option>
+                <option value="Electricity">Electricity</option>
+                <option value="Water">Water</option>
+                <option value="Internet">Internet</option>
+                <option value="Cleaning">Cleaning</option>
+                <option value="Other">Other</option>
             </select>
         </div>
 
         <div class="mb-3">
-            <label>Location</label>
-            <input type="text" name="location"
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location"
                    class="form-control" required>
         </div>
 
         <div class="mb-3">
-            <label>Description</label>
-            <textarea name="description"
+            <label for="description">Description</label>
+            <textarea id="description" name="description"
                       class="form-control" rows="4"
                       required></textarea>
         </div>
@@ -48,3 +50,4 @@
 </div>
 
 {% endblock %}
+```
